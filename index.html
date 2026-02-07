@@ -130,6 +130,7 @@
 </head>
 
 <body>
+  <audio id="loveSong" src="tereliye.mp3" preload="auto"></audio>
   <canvas id="confettiCanvas"></canvas>
 
   <main class="card">
@@ -182,7 +183,12 @@
     <div class="hint" id="hint">“No” seems a bit shy (just like you) <3</div>
 
     <section class="result" id="result">
-      <h2>YAYYY! 🎉 LOVE YOU JAANA</h2>
+  <h2>You just made me the happiest man alive</h2>
+  <p style="font-size:18px; margin-top:8px;">
+    From today, you’re stuck with me  
+    I promise to love you, annoy you, and stand by you no matter what
+    Love you Jaana ❤️
+  </p>
       <img
         class="fireworks"
         src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXBnbHlrYWw0aXZvOXU2eW1yczBnenZoMmplcHVjbnQ4ajZ3NmtpdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cIkOajONnP94I/giphy.gif"
@@ -291,6 +297,18 @@
 
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
+  const song = document.getElementById("loveSong");
+  if (song) {
+    song.volume = 0.9;
+    song.play().catch(() => {});
+  }
+
+  zone.style.display = "none";
+  hint.style.display = "none";
+  result.style.display = "block";
+  resizeConfettiCanvas();
+  fullScreenConfetti();
+});
       zone.style.display = "none";
       hint.style.display = "none";     // HIDE THE HINT
       result.style.display = "block";
@@ -300,4 +318,5 @@
   </script>
 </body>
 </html>
+
 
