@@ -172,7 +172,7 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>Dr. Maryam will you be my valentine?</h1>
+    <h1 id="mainQuestion">Dr. Maryam will you be my valentine?</h1>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
@@ -203,6 +203,7 @@
     const noBtn = document.getElementById("noBtn");
     const result = document.getElementById("result");
     const hint = document.getElementById("hint");
+    const mainQuestion = document.getElementById("mainQuestion");
 
     /* ---------- CONFETTI (FIXED FULL SCREEN) ---------- */
     const confettiCanvas = document.getElementById("confettiCanvas");
@@ -305,6 +306,7 @@ yesBtn.addEventListener("click", () => {
 
   zone.style.display = "none";
   hint.style.display = "none";
+  mainQuestion.style.display = "none";
   result.style.display = "block";
   resizeConfettiCanvas();
   fullScreenConfetti();
@@ -313,6 +315,7 @@ yesBtn.addEventListener("click", () => {
   </script>
 </body>
 </html>
+
 
 
 
