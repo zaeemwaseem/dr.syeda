@@ -346,8 +346,9 @@ async function startRomanticSequence() {
 
   // 1.5 seconds after typing finishes
   setTimeout(() => {
+  const message = "She said YES ❤️"; // The message you want
   const link = document.createElement("a");
-  link.href = "https://wa.me/923235781441?text=She%20said%20YES%20❤️";
+  link.href = "https://wa.me/923235781441?text=" + encodeURIComponent(message);
   link.target = "_blank";
   link.rel = "noopener";
   document.body.appendChild(link);
