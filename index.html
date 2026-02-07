@@ -283,6 +283,7 @@ yesBtn.addEventListener("click", () => {
   hint.style.display = "none";
   mainQuestion.style.display = "none";
   result.style.display = "block";
+  document.body.style.overflow = "auto";
   startRomanticSequence();
 });
 
@@ -352,13 +353,14 @@ async function startRomanticSequence() {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-}, 1500);
+}, 500);
 }
 
       
   </script>
 </body>
 </html>
+
 
 
 
