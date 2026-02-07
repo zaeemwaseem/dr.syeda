@@ -296,7 +296,7 @@
     noBtn.addEventListener("click", e => e.preventDefault());
 
     /* ---------- YES CLICK ---------- */
-    yesBtn.addEventListener("click", () => {
+yesBtn.addEventListener("click", () => {
   const song = document.getElementById("loveSong");
   if (song) {
     song.volume = 0.9;
@@ -309,14 +309,10 @@
   resizeConfettiCanvas();
   fullScreenConfetti();
 });
-      zone.style.display = "none";
-      hint.style.display = "none";     // HIDE THE HINT
-      result.style.display = "block";
-      resizeConfettiCanvas();
-      fullScreenConfetti();
-    });
+      
   </script>
 </body>
 </html>
+
 
 
